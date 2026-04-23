@@ -1,18 +1,2 @@
-ID: 3
-Name: vishnu
-Phone: 9847878200
-Email: vishnu@gmail.com
-Address: kmgm
-------------------------------
-ID: 6
-Name: asd
-Phone: 1234567893
-Email: asd@gmail.com
-Address: asdd
-------------------------------
-ID: 12
-Name: devikas
-Phone: 8089761078
-Email: devika@gmail.com
-Address: vennikulam
-------------------------------
+mis1 - 1234567895
+mis2 - 1234567897

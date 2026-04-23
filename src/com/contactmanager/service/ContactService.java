@@ -23,6 +23,10 @@ public class ContactService {
             throw new InvalidDataException("Invalid Email Address!");
         }
 
+        if (dao.contactExists(contact.getPhone(), userId)) {
+            throw new InvalidDataException("Contact already exists for this user!");
+        }
+
         return dao.addContact(contact, userId);
     }
 

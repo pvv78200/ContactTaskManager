@@ -100,4 +100,25 @@ public class ContactDAO {
 
         return false;
     }
+
+    public boolean contactExists(String phone, int userId) {
+
+        String sql = "SELECT 1 FROM contacts WHERE phone = ? AND user_id = ?";
+
+        try (Connection conn = DBConnection.getConnection();
+             PreparedStatement ps = conn.prepareStatement(sql)) {
+
+            ps.setString(1, phone);
+            ps.setInt(2, userId);
+
+            ResultSet rs = ps.executeQuery();
+            return rs.next(); // true if exists
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return false;
+    }
+
 }
